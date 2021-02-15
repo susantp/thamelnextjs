@@ -10,7 +10,8 @@ import BreadCrumb from "./components/shop/BreadCrumb";
 import SideBar from "./components/shop/SideBar";
 import Categlogue from "./components/shop/Categlogue";
 import HeaderMiddle from "./components/common/HeaderMiddle";
-import Detail from "./components/product/detail";
+import Detail from "./components/product/Detail";
+import ProductDesc from "./components/product/ProductDesc";
 
 export default function Home() {
     return (
@@ -74,6 +75,7 @@ export default function Home() {
                 <div className="container">
                     <BreadCrumb></BreadCrumb>
                     <Detail></Detail>
+                    <ProductDesc></ProductDesc>
                 </div>
             </Layout>
         </>
