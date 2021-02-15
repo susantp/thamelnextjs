@@ -1,0 +1,13 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: "Slider";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/slider.ttf") format("ttf");
+}
+.home-slider h2 {
+  font-family: "Slider";
+}
+.main-nav .menu .submenu {
+  text-transform: none;
+}

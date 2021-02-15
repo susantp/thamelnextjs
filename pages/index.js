@@ -59,6 +59,10 @@ export default function Home() {
           type="text/css"
           href="assets/vendor/fontawesome-free/css/all.min.css"
         />
+        <link rel="stylesheet"
+          type="text/css"
+          href="assets/css/custom.css"
+        />
       </Head>
 
       <TopNotice></TopNotice>

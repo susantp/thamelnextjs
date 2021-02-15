@@ -1,6 +1,8 @@
 import React from "react";
 
 function Footer() {
+    const d = new Date();
+    const thisYear = d.getFullYear();
     return (
         <footer className="footer bg-dark">
             <div className="footer-middle">
@@ -150,8 +152,7 @@ function Footer() {
             <div className="container">
                 <div className="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
                     <p className="footer-copyright py-3 pr-4 mb-0">
-                        © Thamel Mart. 2020. All Rights Reserved. Curated By:{" "}
-                        <a href="#">Techbizz Nepal</a>
+                        © Thamel Mart. {thisYear}. All Rights Reserved. 
                     </p>
                     <a href="#">
                         <img

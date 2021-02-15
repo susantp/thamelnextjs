@@ -6576,6 +6576,12 @@ header .separator {
 .menu .megamenu.megamenu-3cols {
   width: 600px;
 }
+.menu .megamenu.megamenu-4cols {
+  width: 800px;
+}
+.menu .megamenu.megamenu-5cols {
+  width: 1000px;
+}
 .menu .megamenu .row > div {
   padding-top: 1.5rem;
 }
