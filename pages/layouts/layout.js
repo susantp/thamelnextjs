@@ -10,5 +10,6 @@ export default function Layout({ children }) {
       <Footer></Footer>
       <AddToCartModal></AddToCartModal>
     </div>
+
   );
 }

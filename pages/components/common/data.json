@@ -1,0 +1,268 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "parent": "Bells Gongs Tingshas",
+      "child": [
+        {
+          "title": "Handmade Special Bells",
+          "price": "100"
+        },
+        {
+          "title": "Color Bells",
+          "price": "20"
+        },
+        {
+          "title": "Carving Mantras handmade Gong",
+          "price": "30"
+        },
+        {
+          "title": "Tibetan Tingshas Cymbals",
+          "price": "50"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "parent": "Singing Bowls",
+      "child": [
+        {
+          "title": "REAL ANTIQUE COLLECTED",
+          "price": "10"
+        },
+        {
+          "title": "Singing Bowls Accessories",
+          "price": "20"
+        },
+        {
+          "title": "MANTRA CARVED CREATIVITY",
+          "price": "30"
+        },
+        {
+          "title": "Featured Singing Bowls",
+          "price": "40"
+        },
+        {
+          "title": "Bowls Gift Set",
+          "price": "50"
+        },
+        {
+          "title": "Hand Beaten Casting Bowls",
+          "price": "60"
+        },
+        {
+          "title": "HANDMADE AUTHENTIC",
+          "price": "70"
+        },
+        {
+          "title": "Handmade Etching or Carving Bowls",
+          "price": "80"
+        },
+        {
+          "title": "Special Therapy Singing bowls",
+          "price": "90"
+        },
+        {
+          "title": "Mantras and Symbols Painting Bowls",
+          "price": "100"
+        },
+        {
+          "title": "Handmade Seven Chakra Set Singing Bowls",
+          "price": "110"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "parent": "Statues",
+      "child": [
+        {
+          "title": "Buddhist (Metals)",
+          "price": "10"
+        },
+        {
+          "title": "Hindu God and Goddess (Metal)",
+          "price": "10"
+        },
+        {
+          "title": "Resin",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "parent": "Incense and Incense holders",
+      "child": [
+        {
+          "title": "Incenses",
+          "price": "10"
+        },
+        {
+          "title": "Incenses Burner",
+          "price": "10"
+        },
+        {
+          "title": "Incenses holder",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "parent": "Kukri Gurkha Knife",
+      "child": [
+        {
+          "title": "Gurkha Army Military Kukri",
+          "price": "10"
+        },
+        {
+          "title": "Historical Kukri",
+          "price": "10"
+        },
+        {
+          "title": "Traditional Kukris",
+          "price": "10"
+        },
+        {
+          "title": "Decorative Kukris",
+          "price": "10"
+        },
+        {
+          "title": "Large Sacrifice Kukris",
+          "price": "10"
+        },
+        {
+          "title": "Mini And Small Kukris",
+          "price": "10"
+        },
+        {
+          "title": "Hunting Kukri knife",
+          "price": "10"
+        },
+        {
+          "title": "Engraved or Etching Blades",
+          "price": "10"
+        },
+        {
+          "title": "Kukri and Gurkha Army Accessories",
+          "price": "10"
+        },
+        {
+          "title": "Special Design by Gurkha House",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "parent": "Felt Products",
+      "child": [
+        {
+          "title": "Felt Ball Rug",
+          "price": "10"
+        },
+        {
+          "title": "Laundry Dryer Balls",
+          "price": "10"
+        },
+        {
+          "title": "Felt Shoes and Slipper",
+          "price": "10"
+        },
+        {
+          "title": "Felt Cat House",
+          "price": "10"
+        },
+        {
+          "title": "Christmas Decorative Items",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "parent": "Hemp Products",
+      "child": [
+        {
+          "title": "Hemp Backpack",
+          "price": "10"
+        },
+        {
+          "title": "Hemp Coin Purse",
+          "price": "10"
+        },
+        {
+          "title": "Hemp Laptop Bags",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "parent": "Furniture",
+      "child": [
+        {
+          "title": "Butterfly Leather Chairs",
+          "price": "10"
+        },
+        {
+          "title": "Fishing stool or Foot Resting Chair",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "parent": "Meditations And Yoga Accessories",
+      "child": [
+        {
+          "title": "Prayer Wheels",
+          "price": "10"
+        },
+        {
+          "title": "Yoga and Meditation Cushions",
+          "price": "10"
+        },
+        {
+          "title": "Yoga Mala Beads",
+          "price": "10"
+        },
+        {
+          "title": "Yoga Shorts",
+          "price": "10"
+        },
+        {
+          "title": "Tapestries and Bed Sheets",
+          "price": "10"
+        },
+        {
+          "title": "Yoga Books or CDs or Nepali Note Books",
+          "price": "10"
+        },
+        {
+          "title": "Tibetan Prayer Flags",
+          "price": "10"
+        },
+        {
+          "title": "Mallet/Drum Strike",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "parent": "Wooden Max",
+      "child": [
+        {
+          "title": "Hand craft wooden max",
+          "price": "10"
+        },
+        {
+          "title": "Full Store Directory",
+          "price": "10"
+        }
+      ]
+    }
+  ]
+}

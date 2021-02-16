@@ -36,10 +36,11 @@ function Slider() {
                                     <h4 className="text-transform-none m-b-3">
                                         2.5" Dragon Embossed
                                     </h4>
-                                    <h2 className="text-transform-none mb-0">
+                                    <h2 className="text-transform-none mb-3">
                                         Tingsha Tibetan Meditation Bell
                                     </h2>
-                                    <h3 className="m-b-3">30% Off</h3>
+
+                                    {/* <h3 className="m-b-3">30% Off</h3>
                                     <h5 className="d-inline-block mb-0">
                                         Starting At
                                         <b className="coupon-sale-text ml-4 mr-1 text-white bg-secondary align-middle">
@@ -49,7 +50,7 @@ function Slider() {
                                             </em>
                                             99
                                         </b>
-                                    </h5>
+                                    </h5> */}
                                     <a
                                         href="#"
                                         className="btn btn-dark btn-lg ls-10"
