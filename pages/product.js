@@ -75,7 +75,7 @@ export default function Home() {
                 <div className="container">
                     <BreadCrumb></BreadCrumb>
                     <Detail></Detail>
-                    <ProductDesc></ProductDesc>
+                    <ProductDesc></ProductDesc> 
                 </div>
             </Layout>
         </>
