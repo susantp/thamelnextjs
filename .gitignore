@@ -34,3 +34,5 @@ yarn-error.log*
 .vercel
 
 reference for tasks.txt
+#yarn 
+yarn.lock
