@@ -1,20 +1,21 @@
 {
-    "name": "thamelnext",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "export": "next export"
-    },
-    "dependencies": {
-        "http": "^0.0.1-security",
-        "next": "10.0.6",
-        "react": "17.0.1",
-        "react-dom": "17.0.1",
-        "react-helmet": "^6.1.0",
-        "react-image-magnifiers": "^1.4.0",
-        "react-uuid": "^1.0.2"
-    }
+  "name": "thamelnext",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "http": "^0.0.1-security",
+    "next": "10.0.7",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-image-magnifiers": "^1.4.0",
+    "react-uuid": "^1.0.2"
+  }
 }

@@ -50,7 +50,7 @@ export default class ProductDesc extends Component {
                         role="tabpanel"
                         aria-labelledby="product-tab-more-info">
                         <div className="product-desc-content">
-                            <p>
+                            
                                 <table
                                     id="productDetails_detailBullets_sections1"
                                     className="a-keyvalue prodDetTable"
@@ -130,8 +130,6 @@ export default class ProductDesc extends Component {
                                         </tr>
                                     </tbody>
                                 </table>
-
-                            </p>
                         </div>
                         {/* End .product-desc-content */}
                     </div>

@@ -40,7 +40,7 @@ export default class Detail extends Component {
         return (
             <div className="product-single-container product-single-default">
                 <div className="row">
-                    <div className="col-md-5 product-single-gallery">
+                    <div className="col-md-6 col-sm-12 product-single-gallery">
                         <SideBySideMagnifier
                             className="input-position"
                             style={{
@@ -80,7 +80,7 @@ export default class Detail extends Component {
                         </div>
                     </div>
                     {/* End .product-single-gallery */}
-                    <div className="col-md-7 product-single-details">
+                    <div className="col-md-6 col-sm-12 product-single-details">
                         <h1 className="product-title">Beautiful Tibetan Singing Bowl for Meditation and Healing
                         </h1>
                         <div className="ratings-container">
@@ -92,7 +92,7 @@ export default class Detail extends Component {
                                 }}/> {/* End .ratings */}
                             </div>
                             {/* End .product-ratings */}
-                            <a href="javascript:void(0)" className="rating-link">
+                            <a href="{this.reviewRoute}" className="rating-link">
                                 ( 6 Reviews )
                             </a>
                         </div>
@@ -106,21 +106,10 @@ export default class Detail extends Component {
                         <div className="product-desc">
 
                             <ul className="nav nav-tabs" role="tablist">
+                                
                                 <li className="nav-item">
                                     <a
                                         className="nav-link active"
-                                        id="product-tab-features"
-                                        data-toggle="tab"
-                                        href="#product-features-content"
-                                        role="tab"
-                                        aria-controls="product-features-content"
-                                        aria-selected="false">
-                                        Features
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link "
                                         id="product-tab-desc"
                                         data-toggle="tab"
                                         href="#product-desc-content"
@@ -130,10 +119,22 @@ export default class Detail extends Component {
                                         Description
                                     </a>
                                 </li>
+                                <li className="nav-item">
+                                    <a
+                                        className="nav-link "
+                                        id="product-tab-features"
+                                        data-toggle="tab"
+                                        href="#product-features-content"
+                                        role="tab"
+                                        aria-controls="product-features-content"
+                                        aria-selected="false">
+                                        Features
+                                    </a>
+                                </li>
                             </ul>
                             <div className="tab-content">
                                 <div
-                                    className="tab-pane fade "
+                                    className="tab-pane fade show active"
                                     id="product-desc-content"
                                     role="tabpanel"
                                     aria-labelledby="product-tab-desc">
@@ -151,7 +152,7 @@ export default class Detail extends Component {
                                 </div>
 
                                 <div
-                                    className="tab-pane fade show active"
+                                    className="tab-pane fade "
                                     id="product-features-content"
                                     role="tabpanel"
                                     aria-labelledby="product-tab-features">
@@ -222,7 +223,7 @@ export default class Detail extends Component {
                                     title="Mail"/>
                             </div>
                             {/* End .social-icons */}
-                            <a href="javascript:void(0)" className="add-wishlist" title="Add to Wishlist">
+                            <a href="{this.handleWishlist}" className="add-wishlist" title="Add to Wishlist">
                                 Add to Wishlist
                             </a>
                         </div>

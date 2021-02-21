@@ -8,6 +8,7 @@ import Slider from "./components/home/slider";
 import AllHeader from "./allHeader";
 
 export default function Home() {
+ 
   return (
     <>
       <AllHeader></AllHeader> {/*wrapped in head tag */}
