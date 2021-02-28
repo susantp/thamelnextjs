@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { cartReducer } from "./reducers/cart.reducer";
+import { cartReducer } from "./reducers/cartReducer";
 import featuredProduct from "./reducers/featureProductReducer";
 import newArrivalProduct from "./reducers/newArrivalProductReducer";
 
