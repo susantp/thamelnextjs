@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import {SingleItemComponent} from '../ResuableComponent/SingleItemComponent/SingleItemComponent'
-import { OwlSlider } from "./OwlSlider";
+import  OwlSlider  from "./OwlSlider";
 
 function IndexFeaturedSection() {
  const {featuredProduct} = useSelector((state) => state.featuredProduct)
@@ -14,7 +14,7 @@ function IndexFeaturedSection() {
         <h2 className="section-title heading-border ls-20 border-0">
           Featured Products
         </h2>
-        {/* <OwlSlider product={featuredProduct} /> */}
+        <OwlSlider product={featuredProduct} />
         {/* <div
           className="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center owl-loaded owl-drag"
           data-owl-options="{

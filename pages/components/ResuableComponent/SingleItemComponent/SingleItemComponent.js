@@ -14,7 +14,7 @@ export const SingleItemComponent = ({product}) => {
     return (
        <div key={product.id}
                 className="owl-item active"
-                style={{ width: "380px", marginRight: "20px" }}
+                
               >
           <div className="product-default">
                   <figure>
