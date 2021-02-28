@@ -10,7 +10,9 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
                 : cartItem
                 )
         }
+            // toast call here
         return [...cartItems, {...cartItemToAdd, quantity: 1}]
+        
 }
 
 export const removeCartItemQuantity = (cartItems, cartToRemove) => {

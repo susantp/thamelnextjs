@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 import {SideBySideMagnifier, MOUSE_ACTIVATION, TOUCH_ACTIVATION} from "react-image-magnifiers";
+import "react-responsive-modal/styles.css";
+import Modal from "react-responsive-modal";
+import { ProductFullImageSlider, productFullImageSlider } from "./ProductFullImageSlider";
+
 export default class Detail extends Component {
+   
     state = {
         imageSrc: "assets/images/products/zoom/2-big.jpg",
         largeImageSrc: "assets/images/products/zoom/2-big.jpg",
@@ -12,7 +17,8 @@ export default class Detail extends Component {
         fillGapLeft: 0,
         fillGapRight: 10,
         fillGapTop: 10,
-        fillGapBottom: 10
+        fillGapBottom: 10,
+        displayMangnifier: false
     };
     handleClick = (e) => {
         const stateCopy = {
@@ -22,6 +28,12 @@ export default class Detail extends Component {
         stateCopy.largeImageSrc = e.target.src;
         this.setState(stateCopy);
         console.log(this.state);
+    }
+    onOpenModal = () => {
+        this.setState({displayMangnifier: true})
+    }
+    onCloseModal = () => {
+        this.setState({displayMangnifier: false})
     }
     render() {
         const {
@@ -35,13 +47,22 @@ export default class Detail extends Component {
             fillGapLeft,
             fillGapRight,
             fillGapTop,
-            fillGapBottom
+            fillGapBottom,
+            displayMangnifier
         } = this.state;
         return (
-            <div className="product-single-container product-single-default">
+            <div>
+            <Modal open={displayMangnifier} onClose={this.onCloseModal} center>
+            <ProductFullImageSlider />
+            </Modal>
+            
+                <div className="product-single-container product-single-default">
                 <div className="row">
-                    <div className="col-md-6 col-sm-12 product-single-gallery">
+                
+                    <div className="col-md-6 col-sm-12 product-single-gallery" onClick={this.onOpenModal}>
+                       
                         <SideBySideMagnifier
+                        
                             className="input-position"
                             style={{
                             order: "1"
@@ -232,6 +253,9 @@ export default class Detail extends Component {
                     {/* End .product-single-details */}
                 </div>
                 {/* End .row */}
+            </div>
+            
+            
             </div>
         );
     }

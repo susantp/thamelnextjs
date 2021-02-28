@@ -1,3 +1,10 @@
 .product-single-gallery{
   padding-right: 30px;
 }
+
+/* custom styling for react image-slider */
+.react-responsive-modal-modal{
+  display: block !important;
+  width: 100%;
+  max-width: 100% !important;
+}
