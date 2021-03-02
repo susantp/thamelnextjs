@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Slider() {
@@ -51,12 +52,11 @@ function Slider() {
                                             99
                                         </b>
                                     </h5> */}
-                                    <a
-                                        href="#"
-                                        className="btn btn-dark btn-lg ls-10"
-                                    >
-                                        Shop Now!
-                                    </a>
+                                   <Link href="/shop">
+                                    
+                                     <a className="btn btn-dark btn-lg ls-10"> Shop Now!</a>
+                                
+                                   </Link>
                                 </div>
                                 {/* End .banner-layer */}
                             </div>

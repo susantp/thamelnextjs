@@ -8,7 +8,7 @@ export default function Layout({ children }) {
       <MainHeader></MainHeader>
       <main className="main">{children}</main>
       <Footer></Footer>
-      <AddToCartModal></AddToCartModal>
+      {/* <AddToCartModal></AddToCartModal> */}
     </div>
 
   );
