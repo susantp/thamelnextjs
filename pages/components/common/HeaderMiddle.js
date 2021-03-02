@@ -1,7 +1,17 @@
 import React, { Component } from 'react'
+import Link from 'next/link'
+import { createStructuredSelector } from 'reselect'
+import { connect, useDispatch } from 'react-redux'
+import { selectCartItems, selectCartItemsCount, selectCartTotal } from '../../../store/actions/cart/cartSelector'
+import { removeItemCart } from '../../../store/actions/cart/cart'
 
-export default class HeaderMiddle extends Component {
-    render() {
+const  HeaderMiddle = ({cartItemsCount, cartItems, cartItemsTotal}) => {
+
+const dispatch = useDispatch()
+
+const removeCartItem = (item) => {
+    dispatch(removeItemCart(item))
+}
         return (
             <div className="header-middle">
           <div className="container">
@@ -12,9 +22,11 @@ export default class HeaderMiddle extends Component {
               >
                 <i className="icon-menu" />
               </button>
-              <a href="index.html" className="logo">
+              <Link  href="/">
+              <a  className="logo">
                 <img src="assets/images/logo.png" alt="Porto Logo" />
               </a>
+              </Link>
             </div>
             {/* End .header-left */}
             <div className="header-right w-lg-max">
@@ -91,78 +103,55 @@ export default class HeaderMiddle extends Component {
                   data-display="static"
                 >
                   <i className="icon-shopping-cart" />
-                  <span className="cart-count badge-circle">2</span>
+                  <span className="cart-count badge-circle">{cartItemsCount}</span>
                 </a>
                 <div className="dropdown-menu">
                   <div className="dropdownmenu-wrapper">
                     <div className="dropdown-cart-header">
-                      <span>2 Items</span>
+                      <span> {cartItemsCount} Items</span>
                       <a href="cart.html" className="float-right">
                         View Cart
                     </a>
                     </div>
                     {/* End .dropdown-cart-header */}
                     <div className="dropdown-cart-products">
-                      <div className="product">
+                      {cartItems.map(item => 
+                        <div key={item.id} className="product">
                         <div className="product-details">
                           <h4 className="product-title">
-                            <a href="#">Kukris</a>
+                            <a href="#">{item.name} </a>
                           </h4>
                           <span className="cart-product-info">
-                            <span className="cart-product-qty">1</span>x $99.00
+                            <span className="cart-product-qty">{item.quantity} </span>x ${item.product_price}
                         </span>
                         </div>
                         {/* End .product-details */}
                         <figure className="product-image-container">
                           <a href="#" className="product-image">
                             <img
-                              src="assets/images/products/cart/product-1.jpg"
+                              src={item.product_image}
                               alt="product"
                               width={80}
                               height={80}
                             />
                           </a>
                           <a
-                            href="#"
+                            onClick={() => removeCartItem(item)}
+                            style={{cursor: "pointer"}}
                             className="btn-remove icon-cancel"
                             title="Remove Product"
                           />
                         </figure>
                       </div>
-                      {/* End .product */}
-                      <div className="product">
-                        <div className="product-details">
-                          <h4 className="product-title">
-                            <a href="#">Pure Hemp Backpack</a>
-                          </h4>
-                          <span className="cart-product-info">
-                            <span className="cart-product-qty">1</span>x $35.00
-                        </span>
-                        </div>
-                        {/* End .product-details */}
-                        <figure className="product-image-container">
-                          <a href="#" className="product-image">
-                            <img
-                              src="assets/images/products/cart/product-2.jpg"
-                              alt="product"
-                              width={80}
-                              height={80}
-                            />
-                          </a>
-                          <a
-                            href="#"
-                            className="btn-remove icon-cancel"
-                            title="Remove Product"
-                          />
-                        </figure>
-                      </div>
-                      {/* End .product */}
+                      /* End .product */
+                       )}
+                     
                     </div>
                     {/* End .cart-product */}
                     <div className="dropdown-cart-total">
                       <span>Total</span>
                       <span className="cart-total-price float-right">
-                        $134.00
+                        ${cartItemsTotal}
                     </span>
                     </div>
                     {/* End .dropdown-cart-total */}
@@ -181,5 +170,13 @@ export default class HeaderMiddle extends Component {
           </div>
         </div>
         )
-    }
+    
 }
+
+const mapStateToProps = createStructuredSelector({
+  cartItemsCount: selectCartItemsCount,
+  cartItems : selectCartItems,
+  cartItemsTotal : selectCartTotal
+})
+
+export default connect(mapStateToProps) (HeaderMiddle)
