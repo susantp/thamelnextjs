@@ -1,15 +1,8 @@
 import Head from "next/head";
 import Layout from "./layouts/layout";
-import IndexTopInfoBoxBanner from "./components/home/indexTopInfoBoxBanner";
-import IndexFeaturedSection from "./components/home/indexFeaturedSection";
-import IndexSendGift from "./components/home/indexSendGift";
-import IndexNewArrival from "./components/home/indexNewArrival";
-import TopNotice from "./components/home/topNotice";
-import Slider from "./components/home/slider";
 import BreadCrumb from "./components/common/BreadCrumb";
 import SideBar from "./components/shop/SideBar";
 import Categlogue from "./components/shop/Categlogue";
-import HeaderMiddle from "./components/common/HeaderMiddle";
 
 export default function Home() {
   return (
