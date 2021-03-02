@@ -10,6 +10,8 @@ import BreadCrumb from "./components/common/BreadCrumb";
 import SideBar from "./components/shop/SideBar";
 import Categlogue from "./components/shop/Categlogue";
 import HeaderMiddle from "./components/common/HeaderMiddle";
+import ItemList from "./components/cart/itemList";
+import Summary from "./components/cart/summary";
 
 export default function Home() {
   return (
@@ -70,8 +72,8 @@ export default function Home() {
         <div className="container">
           <BreadCrumb></BreadCrumb>
           <div className="row">
-            <SideBar></SideBar>
-            <Categlogue></Categlogue>
+            <ItemList></ItemList>
+            <Summary></Summary>
           </div>
         </div>
       </Layout>
