@@ -1,6 +1,11 @@
+import Link from "next/link";
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCartItems } from "../../../store/actions/cart/cartSelector";
 
-export default function ItemList() {
+function ItemList({ cartItems }) {
+  console.log("show cart item", cartItems);
   return (
     <div className="col-lg-8">
       <div className="cart-table-container">
@@ -14,86 +19,55 @@ export default function ItemList() {
             </tr>
           </thead>
           <tbody>
-            <tr className="product-row">
-              <td className="product-col">
-                <figure className="product-image-container">
-                  <a href="product.html" className="product-image">
-                    <img
-                      src="assets/images/products/product-4.jpg"
-                      alt="product"
+            {cartItems.map((item) => (
+              <React.Fragment>
+                <tr key={item.key} className="product-row">
+                  <td className="product-col">
+                    <figure className="product-image-container">
+                      <Link href="/product">
+                        <a className="product-image">
+                          <img src={item.product_image} alt="product" />
+                        </a>
+                      </Link>
+                    </figure>
+                    <h2 className="product-title">
+                      <Link href="/product">
+                        <a>{item.name}</a>
+                      </Link>
+                    </h2>
+                  </td>
+                  <td> {item.product_price} </td>
+                  <td>
+                    <input
+                      value={item.quantity}
+                      className="vertical-quantity form-control"
+                      type="text"
                     />
-                  </a>
-                </figure>
-                <h2 className="product-title">
-                  <a href="product.html">Men Watch</a>
-                </h2>
-              </td>
-              <td>$17.90</td>
-              <td>
-                <input className="vertical-quantity form-control" type="text" />
-              </td>
-              <td>$17.90</td>
-            </tr>
-            <tr className="product-action-row">
-              <td colSpan={4} className="clearfix">
-                <div className="float-left">
-                  <a href="#" className="btn-move">
-                    Move to Wishlist
-                  </a>
-                </div>
-                {/* End .float-left */}
-                <div className="float-right">
-                  <a href="#" title="Edit product" className="btn-edit">
-                    <span className="sr-only">Edit</span>
-                    <i className="icon-pencil" />
-                  </a>
-                  <a href="#" title="Remove product" className="btn-remove">
-                    <span className="sr-only">Remove</span>
-                  </a>
-                </div>
-                {/* End .float-right */}
-              </td>
-            </tr>
-            <tr className="product-row">
-              <td className="product-col">
-                <figure className="product-image-container">
-                  <a href="product.html" className="product-image">
-                    <img
-                      src="assets/images/products/product-3.jpg"
-                      alt="product"
-                    />
-                  </a>
-                </figure>
-                <h2 className="product-title">
-                  <a href="product.html">Computer Mouse</a>
-                </h2>
-              </td>
-              <td>$8.90</td>
-              <td>
-                <input className="vertical-quantity form-control" type="text" />
-              </td>
-              <td>$8.90</td>
-            </tr>
-            <tr className="product-action-row">
-              <td colSpan={4} className="clearfix">
-                <div className="float-left">
-                  <a href="#" className="btn-move">
-                    Move to Wishlist
-                  </a>
-                </div>
-                {/* End .float-left */}
-                <div className="float-right">
-                  <a href="#" title="Edit product" className="btn-edit">
-                    <span className="sr-only">Edit</span>
-                    <i className="icon-pencil" />
-                  </a>
-                  <a href="#" title="Remove product" className="btn-remove">
-                    <span className="sr-only">Remove</span>
-                  </a>
-                </div>
-                {/* End .float-right */}
-              </td>
-            </tr>
+                  </td>
+                  <td> {item.product_price * item.quantity} </td>
+                </tr>
+                <tr className="product-action-row">
+                  <td colSpan={4} className="clearfix">
+                    <div className="float-left">
+                      <a href="#" className="btn-move">
+                        Move to Wishlist
+                      </a>
+                    </div>
+                    {/* End .float-left */}
+                    <div className="float-right">
+                      <a href="#" title="Edit product" className="btn-edit">
+                        <span className="sr-only">Edit</span>
+                        <i className="icon-pencil" />
+                      </a>
+                      <a href="#" title="Remove product" className="btn-remove">
+                        <span className="sr-only">Remove</span>
+                      </a>
+                    </div>
+                    {/* End .float-right */}
+                  </td>
+                </tr>
+              </React.Fragment>
+            ))}
           </tbody>
           <tfoot>
             <tr>
@@ -146,3 +120,9 @@ export default function ItemList() {
     </div>
   );
 }
+
+const mapStateToProps = createStructuredSelector({
+  cartItems: selectCartItems,
+});
+
+export default connect(mapStateToProps)(ItemList);

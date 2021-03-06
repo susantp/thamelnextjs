@@ -1,5 +1,5 @@
 import React from "react";
-import { createWrapper } from "next-redux-wrapper";
+import withRedux,{ createWrapper } from "next-redux-wrapper";
 import { Provider } from "react-redux";
 import store from "../store/store";
 

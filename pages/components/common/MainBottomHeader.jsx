@@ -34,7 +34,10 @@ constructor(props) {
                           return (
                           <ul className="submenu" key={uuid()}>
                           <li>
-                            <a href="#">{child.title.charAt(0).toUpperCase()+child.title.slice(1).toLowerCase()}</a>
+                            
+                            <a>{child.title.charAt(0).toUpperCase()+child.title.slice(1).toLowerCase()}</a>
+                           
+                           
                           </li>
                         </ul>
                         )

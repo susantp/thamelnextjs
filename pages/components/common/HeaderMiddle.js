@@ -113,9 +113,9 @@ const HeaderMiddle = ({ cartItemsCount, cartItems, cartItemsTotal }) => {
               <div className="dropdownmenu-wrapper">
                 <div className="dropdown-cart-header">
                   <span> {cartItemsCount} Items</span>
-                  <a href="cart.html" className="float-right">
-                    View Cart
-                  </a>
+                  <Link href={"/cart"}>
+                    <a className="float-right"> View Cart </a>
+                  </Link>
                 </div>
                 {/* End .dropdown-cart-header */}
                 <div className="dropdown-cart-products">
