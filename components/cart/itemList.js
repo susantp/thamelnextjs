@@ -32,9 +32,9 @@ function ItemList({ cartItems }) {
                       </Link>
                     </figure>
                     <h2 className="product-title">
-                      <Link href="/product">
-                        <a>{item.name}</a>
-                      </Link>
+                      {/* <Link href="/product"> */}
+                      <a>{item.name}</a>
+                      {/* </Link> */}
                     </h2>
                   </td>
                   <td> {item.product_price} </td>
@@ -50,17 +50,15 @@ function ItemList({ cartItems }) {
                 <tr className="product-action-row">
                   <td colSpan={4} className="clearfix">
                     <div className="float-left">
-                      <a href="#" className="btn-move">
-                        Move to Wishlist
-                      </a>
+                      <a className="btn-move">Move to Wishlist</a>
                     </div>
                     {/* End .float-left */}
                     <div className="float-right">
-                      <a href="#" title="Edit product" className="btn-edit">
+                      <a title="Edit product" className="btn-edit">
                         <span className="sr-only">Edit</span>
                         <i className="icon-pencil" />
                       </a>
-                      <a href="#" title="Remove product" className="btn-remove">
+                      <a title="Remove product" className="btn-remove">
                         <span className="sr-only">Remove</span>
                       </a>
                     </div>

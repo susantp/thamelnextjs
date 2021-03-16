@@ -1,1 +1,1 @@
-export const DEVHOST = process.env.NEXT_PUBLIC_DEV_HOST;
+export const DEVHOST = "http://localhost:3000";

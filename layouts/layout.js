@@ -1,7 +1,6 @@
 import React from "react";
 import MainHeader from "./mainHeader";
 import Footer from "./footer";
-import AddToCartModal from "./addToCartModal";
 export default function Layout({ children }) {
   return (
     <div id="page-wrapper">
@@ -10,6 +9,5 @@ export default function Layout({ children }) {
       <Footer></Footer>
       {/* <AddToCartModal></AddToCartModal> */}
     </div>
-
   );
 }
