@@ -3,7 +3,6 @@ import IndexTopInfoBoxBanner from "./components/home/indexTopInfoBoxBanner";
 import IndexFeaturedSection from "./components/home/indexFeaturedSection";
 import IndexSendGift from "./components/home/indexSendGift";
 import IndexNewArrival from "./components/home/indexNewArrival";
-import TopNotice from "./components/home/topNotice";
 import Slider from "./components/home/slider";
 import AllHeader from "./allHeader";
 import { useDispatch } from "react-redux";
@@ -12,17 +11,17 @@ import { getFeatureProduct } from "../store/actions/featuredProduct/featuredProd
 import { getNewArrivalProduct } from "../store/actions/newArrivalProduct/NewArrivalproduct";
 
 export default function Home() {
-  const dispatch = useDispatch() //redxu action to dispatch
+  const dispatch = useDispatch(); //redxu action to dispatch
 
   useEffect(() => {
-    dispatch(getFeatureProduct())
-    dispatch(getNewArrivalProduct())
-  }, [])
- 
+    dispatch(getFeatureProduct());
+    dispatch(getNewArrivalProduct());
+  }, []);
+
   return (
     <>
       <AllHeader></AllHeader> {/*wrapped in head tag */}
-      <TopNotice></TopNotice>
+      {/* <TopNotice></TopNotice> */}
       <Layout>
         <Slider></Slider>
         <IndexTopInfoBoxBanner></IndexTopInfoBoxBanner>

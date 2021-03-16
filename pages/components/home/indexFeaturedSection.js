@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { SingleItemComponent } from "../ResuableComponent/SingleItemComponent/SingleItemComponent";
 import OwlSlider from "./OwlSlider";
 
 function IndexFeaturedSection() {
