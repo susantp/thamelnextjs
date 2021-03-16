@@ -8,6 +8,7 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { SingleItemComponent } from "../ResuableComponent/SingleItemComponent/SingleItemComponent";
+import uuid from "react-uuid";
 
 const OwlSlider = ({ products }) => {
   const [visibleSlides, setvisibleSlides] = useState(4);
@@ -39,7 +40,7 @@ const OwlSlider = ({ products }) => {
     >
       <Slider>
         {products.map((product) => (
-          <Slide index={product.id}>
+          <Slide key={uuid()} index={product.id}>
             <SingleItemComponent product={product} />
             {/* <p>{product.id}</p> */}
           </Slide>
