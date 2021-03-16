@@ -7,7 +7,7 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { SingleItemComponent } from "../ResuableComponent/SingleItemComponent/SingleItemComponent";
+import SingleItemComponent from "../ResuableComponent/SingleItemComponent/SingleItemComponent";
 import uuid from "react-uuid";
 
 const OwlSlider = ({ products }) => {
@@ -20,10 +20,10 @@ const OwlSlider = ({ products }) => {
     const innerWidth = e.target.innerWidth;
     if (innerWidth < 800) {
       setvisibleSlides(2);
-      setSlideHeight(280);
+      setSlideHeight(330);
     } else {
       setvisibleSlides(4);
-      // setSlideHeight(320);
+      setSlideHeight(320);
     }
   };
   useEffect(() => {

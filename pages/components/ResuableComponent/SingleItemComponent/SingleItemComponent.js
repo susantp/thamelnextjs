@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addItemCart } from "../../../../store/actions/cart/cart";
 
-export const SingleItemComponent = ({ product }) => {
+export default function SingleItemComponent({ product }) {
   const dispatch = useDispatch();
   const {
     name,
@@ -82,4 +82,4 @@ export const SingleItemComponent = ({ product }) => {
       {/* End .product-details */}
     </div>
   );
-};
+}
