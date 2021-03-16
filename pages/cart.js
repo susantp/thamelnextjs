@@ -1,8 +1,8 @@
-import Layout from "./layouts/layout";
+import Layout from "./../layouts/layout";
 import Head from "next/head";
-import BreadCrumb from "./components/common/BreadCrumb";
-import ItemList from "./components/cart/itemList";
-import Summary from "./components/cart/summary";
+import BreadCrumb from "./../components/common/BreadCrumb";
+import ItemList from "./../components/cart/itemList";
+import Summary from "./../components/cart/summary";
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Layout from "./layouts/layout";
-import Detail from "./components/product/Detail";
-import ProductDesc from "./components/product/ProductDesc";
-import BreadCrumb from "./components/common/BreadCrumb";
+import Layout from "./../layouts/layout";
+import Detail from "./../components/product/Detail";
+import ProductDesc from "./../components/product/ProductDesc";
+import BreadCrumb from "./../components/common/BreadCrumb";
 
 export default function Home() {
   return (

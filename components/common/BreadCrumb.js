@@ -1,5 +1,5 @@
 import React from "react";
-import * as utils from "./../../../utils/urls";
+import * as utils from "./../../utils/urls";
 import Link from "next/link";
 
 export default function BreadCrumb() {

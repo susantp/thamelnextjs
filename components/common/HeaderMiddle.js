@@ -6,9 +6,9 @@ import {
   selectCartItems,
   selectCartItemsCount,
   selectCartTotal,
-} from "../../../store/actions/cart/cartSelector";
-import { removeItemCart } from "../../../store/actions/cart/cart";
-import * as utils from "./../../../utils/urls";
+} from "../../store/actions/cart/cartSelector";
+import { removeItemCart } from "../../store/actions/cart/cart";
+import * as utils from "./../../utils/urls";
 
 const HeaderMiddle = ({ cartItemsCount, cartItems, cartItemsTotal }) => {
   const dispatch = useDispatch();

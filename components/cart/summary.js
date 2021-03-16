@@ -3,7 +3,7 @@ import { createStructuredSelector } from "reselect";
 import {
   selectCartItemsCount,
   selectCartTotal,
-} from "../../../store/actions/cart/cartSelector";
+} from "./../../store/actions/cart/cartSelector";
 import { connect } from "react-redux";
 
 function Summary(cartItemsTotal) {
@@ -127,5 +127,4 @@ const mapStateToProps = createStructuredSelector({
   cartItemsTotal: selectCartTotal,
 });
 
-
-export default connect(mapStateToProps) (Summary)
+export default connect(mapStateToProps)(Summary);

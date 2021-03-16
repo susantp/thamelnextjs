@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import { connect } from "react-redux";
+import uuid from "react-uuid";
 import { createStructuredSelector } from "reselect";
-import { selectCartItems } from "../../../store/actions/cart/cartSelector";
+import { selectCartItems } from "./../../store/actions/cart/cartSelector";
 
 function ItemList({ cartItems }) {
   console.log("show cart item", cartItems);
@@ -21,7 +22,7 @@ function ItemList({ cartItems }) {
           <tbody>
             {cartItems.map((item) => (
               <React.Fragment>
-                <tr key={item.key} className="product-row">
+                <tr key={uuid()} className="product-row">
                   <td className="product-col">
                     <figure className="product-image-container">
                       <Link href="/product">
