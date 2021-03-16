@@ -28,7 +28,10 @@ const OwlSlider = ({ products }) => {
   };
   useEffect(() => {
     window.addEventListener("resize", reportWindowSize);
-  }, [reportWindowSize]);
+    return () => {
+      window.removeEventListener("resize", reportWindowSize);
+    };
+  }, []);
 
   return (
     <CarouselProvider
