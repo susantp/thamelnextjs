@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { SideBySideMagnifier } from "react-image-magnifiers";
 import "react-responsive-modal/styles.css";
 import Modal from "react-responsive-modal";
-import { ProductFullImageSlider } from "./ProductFullImageSlider";
+import ProductFullImageSlider from "./ProductFullImageSlider";
 
 export default class Detail extends Component {
   state = {
